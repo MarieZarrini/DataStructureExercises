@@ -2,7 +2,7 @@
 {
 	internal class CharacterFrequency
 	{
-		public static string Calculate(string input)
+		internal static string Calculate(string input)
 		{
 			var result = input.ToLower().GroupBy(ch => ch).Select(group => new
 			{

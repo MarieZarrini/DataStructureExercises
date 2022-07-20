@@ -2,7 +2,7 @@
 {
 	internal class FileCreator
 	{
-		public static void Create(string path)
+		internal static void Create(string path)
 		{
 			File.CreateText(path);
 		}
