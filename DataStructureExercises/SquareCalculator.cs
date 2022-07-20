@@ -2,10 +2,16 @@
 {
 	internal class SquareCalculator
 	{
-		public static string Calculate(int[] numbers)
+		public int[] Numbers { get; set; }
+
+		internal void Calculate()
 		{
-			var result = numbers.Select(n => n * n).ToArray();
-			return string.Join(", ", result);
+			Numbers = Numbers.Select(n => n * n).ToArray();
+		}
+
+		internal string GetResult()
+		{
+			return string.Join(", ", Numbers);
 		}
 	}
 }
