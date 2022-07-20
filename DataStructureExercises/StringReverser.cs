@@ -2,12 +2,17 @@
 {
 	internal class StringReverser
 	{
-		public static string Reverse(string input)
+		internal static string Reverse(string input)
 		{
 			if (input.Length == 1)
 				return input;
 			else
-				return input[^1] + Reverse(input[0..^1]);
+			{
+				var lastIndex = input.Length - 1;
+				var inputSubstring = input.Substring(0, lastIndex);
+
+				return input[lastIndex] + Reverse(inputSubstring);
+			}
 		}
 	}
 }
