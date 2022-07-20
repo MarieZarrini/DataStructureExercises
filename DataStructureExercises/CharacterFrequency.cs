@@ -12,5 +12,20 @@
 
 			return string.Join(Environment.NewLine, result);
 		}
+
+		internal static string Calculate2(string input)
+		{
+			var result = new Dictionary<char, int>();
+
+			foreach (var character in input)
+			{
+				if (result.ContainsKey(character))
+					result[character]++;
+				else
+					result[character] = 1;
+			}
+
+			return string.Join(Environment.NewLine, result);
+		}
 	}
 }
