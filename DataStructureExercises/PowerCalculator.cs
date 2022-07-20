@@ -2,12 +2,9 @@
 {
 	internal class PowerCalculator
 	{
-		public static int Calculate(int number, int power)
+		internal static int Calculate(int number, int power)
 		{
-			if (power == 1)
-				return number;
-			else
-				return number * Calculate(number, power - 1);
+			return power == 1 ? number : number * Calculate(number, power - 1);
 		}
 	}
 }
