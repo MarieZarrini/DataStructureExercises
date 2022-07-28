@@ -1,9 +1,12 @@
 ﻿namespace DataStructureExercises
 {
-	internal class StringReverser
+	public class StringReverser
 	{
-		internal static string Reverse(string input)
+		public static string Reverse(string input)
 		{
+			if (string.IsNullOrEmpty(input))
+				throw new ArgumentNullException(input);
+
 			if (input.Length == 1)
 				return input;
 			else
